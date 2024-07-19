@@ -51,11 +51,13 @@ export default function Dashboard() {
           <ItemsCol resumes={resumes} title="Qualified Resumes" icon={FaCheck} setModalInfo={setModalInfo} />
           <ItemsCol resumes={resumes} title="Unqualified Resumes" icon={FaTimes} setModalInfo={setModalInfo} />
           <ItemsCol resumes={resumes} title="Unfiltered Resumes (In Progress)" icon={FaFileAlt} setModalInfo={setModalInfo} />
-          <div className="bg-gray-800 rounded-lg overflow-hidden h-96 glassCard shadow-2xl">
-            <div className="flex items-center justify-between px-4 py-3">
-              <span className="text-2xl font-light text-white">Settings</span>
-            </div>
-          </div>
+            <Image
+                src="/card.svg"
+                alt="Description of SVG"
+                width={0}
+                height={0}
+                className="glassCard2"
+              />
         </div>
       </div>
 
