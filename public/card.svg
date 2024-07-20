@@ -1,39 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="972" height="586" viewBox="0 0 972 586" fill="none">
-  <g filter="url(#filter0_bdi_1686_1825)">
-    <path d="M23 36C23 26.6112 30.6112 19 40 19H932C941.389 19 949 26.6112 949 36V542C949 551.389 941.389 559 932 559H40C30.6112 559 23 551.389 23 542V36Z" fill="url(#paint0_linear_1686_1825)" fill-opacity="0.25" shape-rendering="crispEdges"/>
-    <path d="M23 36C23 26.6112 30.6112 19 40 19H932C941.389 19 949 26.6112 949 36V542C949 551.389 941.389 559 932 559H40C30.6112 559 23 551.389 23 542V36Z" fill="url(#paint1_linear_1686_1825)" fill-opacity="0.3" shape-rendering="crispEdges"/>
-    <path d="M25 36C25 27.7157 31.7157 21 40 21H932C940.284 21 947 27.7157 947 36V542C947 550.284 940.284 557 932 557H40C31.7157 557 25 550.284 25 542V36Z" stroke="url(#paint2_linear_1686_1825)" stroke-width="4" shape-rendering="crispEdges"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
   <defs>
-    <filter id="filter0_bdi_1686_1825" x="-11.6" y="-15.6" width="995.2" height="609.2" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-      <feGaussianBlur in="BackgroundImageFix" stdDeviation="17.3"/>
-      <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1686_1825"/>
-      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-      <feOffset dy="4"/>
-      <feGaussianBlur stdDeviation="11.1"/>
-      <feComposite in2="hardAlpha" operator="out"/>
+    <filter id="filter0_bdi" filterUnits="objectBoundingBox" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2%"/>
+      <feOffset dy="1%"/>
+      <feComposite in2="SourceAlpha" operator="out"/>
       <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.65 0"/>
-      <feBlend mode="normal" in2="effect1_backgroundBlur_1686_1825" result="effect2_dropShadow_1686_1825"/>
-      <feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_1686_1825" result="shape"/>
+      <feBlend in2="BackgroundImageFix" result="effect1_dropShadow"/>
+      <feBlend in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
       <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-      <feOffset dy="4"/>
-      <feGaussianBlur stdDeviation="32.65"/>
+      <feOffset dy="1%"/>
+      <feGaussianBlur stdDeviation="5%"/>
       <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
       <feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.15 0"/>
-      <feBlend mode="normal" in2="shape" result="effect3_innerShadow_1686_1825"/>
+      <feBlend in2="shape" result="effect2_innerShadow"/>
     </filter>
-    <linearGradient id="paint0_linear_1686_1825" x1="277.5" y1="675.269" x2="867.134" y2="928.366" gradientUnits="userSpaceOnUse">
-      <stop offset="0.405"/>
-      <stop offset="0.995" stop-color="#129BFF"/>
+    <linearGradient id="paint0_linear" x1="0%" y1="100%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+      <stop offset="0.405" stop-color="rgba(0,0,0,0.25)"/>
+      <stop offset="0.995" stop-color="rgba(18,155,255,0.25)"/>
     </linearGradient>
-    <linearGradient id="paint1_linear_1686_1825" x1="-32.0269" y1="610.162" x2="438.04" y2="855.05" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#129BFF"/>
-      <stop offset="1" stop-opacity="0"/>
+    <linearGradient id="paint1_linear" x1="0%" y1="100%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+      <stop stop-color="rgba(18,155,255,0.3)"/>
+      <stop offset="1" stop-color="rgba(0,0,0,0)"/>
     </linearGradient>
-    <linearGradient id="paint2_linear_1686_1825" x1="67.7093" y1="458.145" x2="602.004" y2="964.109" gradientUnits="userSpaceOnUse">
-      <stop stop-color="white" stop-opacity="0"/>
+    <linearGradient id="paint2_linear" x1="0%" y1="0%" x2="100%" y2="100%" gradientUnits="userSpaceOnUse">
+      <stop stop-color="rgba(255,255,255,0)"/>
       <stop offset="1" stop-color="#10678C"/>
     </linearGradient>
   </defs>
+  <g filter="url(#filter0_bdi)">
+    <rect x="2" y="2" width="96" height="96" rx="2%" ry="2%" fill="url(#paint0_linear)" shape-rendering="crispEdges"/>
+    <rect x="2" y="2" width="96" height="96" rx="2%" ry="2%" fill="url(#paint1_linear)" shape-rendering="crispEdges"/>
+    <rect x="2" y="2" width="96" height="96" rx="2%" ry="2%" stroke="url(#paint2_linear)" stroke-width="0.5%" fill="none" shape-rendering="crispEdges"/>
+  </g>
 </svg>

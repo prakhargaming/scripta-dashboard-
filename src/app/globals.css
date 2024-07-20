@@ -63,12 +63,95 @@ body {
 }
 
 .glassCard2 {
-  width: 926px;
-  height: 540px;
+  width: auto;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   fill: linear-gradient(107deg, rgba(18, 155, 255, 0.30) 20.95%, rgba(0, 0, 0, 0.00) 70.45%), linear-gradient(104deg, rgba(0, 0, 0, 0.25) 70.74%, rgba(18, 155, 255, 0.25) 106.32%);
+  background-image: url('/card.svg');
   stroke-width: 4px;
   stroke: rgba(255, 255, 255, 0.00);
-  box-shadow: 0px 4px 65.3px 0px rgba(255, 255, 255, 0.15) inset;
-  filter: drop-shadow(0px 4px 22.2px rgba(0, 0, 0, 0.65));
+  filter: drop-shadow(0px 4px 22.2px rgba(0, 0, 0, 0.65));  
   backdrop-filter: blur(17.299999237060547px);
+  display: flex;
+  flex-direction: column;
 }
+
+.globalBackground {
+  background: linear-gradient(to top left, rgba(68, 108, 248, 0.50) 5%, rgb(0,0,0) 50%, rgba(68, 108, 248, 0.50) 95%);
+} 
+
+/* .globalBackground {
+  background: rgb(0, 0, 0)
+}  */
+
+.title-container {
+  position: relative;
+  overflow: hidden;
+  height: 120px
+}
+
+.dashboardAnal1, .dashboardAnal2, .dashboardAnal3, .dashboardAnal4  {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-start; /* Changed from center to flex-start */
+  align-items: center;
+  text-align: left; /* Changed from center to left */
+  font-family: Outfit, sans-serif;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 85px;
+  padding-left: 32px; /* Add some padding to offset from the left edge */
+}
+
+.dashboardAnal1 {
+  filter: blur(7.6px);
+  background: linear-gradient(0deg, #173B76 35.71%, #0095A6 56.07%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 3;
+}
+
+.dashboardAnal2 {
+  filter: blur(7.6px);
+  background: linear-gradient(0deg, #173B76 35.71%, #0095A6 56.07%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 2;
+}
+
+.dashboardAnal3 {
+  background: linear-gradient(0deg, #173B76 35.71%, #19ACBC 56.07%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+}
+
+.dashboardAnal4 {
+  background: white;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 1;
+}
+
+/* .glassCard2 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url('/card.svg');
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(3.6px);
+  -webkit-backdrop-filter: blur(3.6px);
+  transition: transform 0.2s;
+} */

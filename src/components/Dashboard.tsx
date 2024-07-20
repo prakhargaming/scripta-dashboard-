@@ -1,3 +1,5 @@
+// Dashboard.tsx
+
 "use client";
 
 import React, { useState } from 'react';
@@ -7,7 +9,7 @@ import ItemsCol from '../components/Itemscol';
 import { pdfjs } from 'react-pdf';
 import Image from 'next/image';
 import Sidebar from './Sidebar';
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+// pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 
 interface ResumeItem {
   name: string;
@@ -33,31 +35,30 @@ export default function Dashboard() {
   const [modalInfo, setModalInfo] = useState<ResumeItem | null>(null);
 
   return (
-    <div className="flex min-h-screen bg-gradient-to-tl from-blue-900 via-slate-900 to-blue-900">
-      {/* Sidebar */}
-      <div className="fixed top-0 left-0 w-20 flex flex-col items-center py-4 space-y-6">
-        <Image src={HomeIcon} /> {/* Logo */}
-        <HomeIcon className="h-8 w-8 text-white" />
-        <UserIcon className="h-8 w-8 text-white" />
-        <DocumentTextIcon className="h-8 w-8 text-white" />
-        <CogIcon className="h-8 w-8 text-white" />
+    <div className="flex min-h-screen globalBackground">
+      {/* New Sidebar */}
+      <div className="fixed top-1/2 left-0 transform -translate-y-1/2">
+        <Sidebar />
       </div>
 
-      {/* Main Content */}
-      <div className="flex-1 ml-20 p-8">
-        <div className="text-5xl text-white mb-8">Dashboard Analytics</div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <ItemsCol resumes={resumes} showStatus={true} title="Scored Resumes" icon={FaFileAlt} setModalInfo={setModalInfo} />
-          <ItemsCol resumes={resumes} title="Qualified Resumes" icon={FaCheck} setModalInfo={setModalInfo} />
-          <ItemsCol resumes={resumes} title="Unqualified Resumes" icon={FaTimes} setModalInfo={setModalInfo} />
-          <ItemsCol resumes={resumes} title="Unfiltered Resumes (In Progress)" icon={FaFileAlt} setModalInfo={setModalInfo} />
-            <Image
-                src="/card.svg"
-                alt="Description of SVG"
-                width={0}
-                height={0}
-                className="glassCard2"
-              />
+      {/* Main content */}
+      <div className="flex-1 ml-[130.466px] p-8 relative">
+        <div className="title-container relative h-60 pl-8">
+          <div className="dashboardAnal3 absolute inset-0">Dashboard Analytics</div>
+          <div className="dashboardAnal2 absolute inset-0">Dashboard Analytics</div>
+          <div className="dashboardAnal1 absolute inset-0">Dashboard Analytics</div>
+          <div className="dashboardAnal4 absolute inset-0">Dashboard Analytics</div>
+        </div>
+        {/* Dashboard */}
+        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6">
+          <ItemsCol resumes={resumes} showStatus={true} title="Scored Resumes" numero={5} icon={FaFileAlt} setModalInfo={setModalInfo} />
+          <ItemsCol resumes={resumes} title="Qualified Resumes" numero={5} icon={FaCheck} setModalInfo={setModalInfo} />
+          <ItemsCol resumes={resumes} title="Unqualified Resumes" numero={5} icon={FaTimes} setModalInfo={setModalInfo} />
+        </div>
+        <div className="h-6"></div>
+        <div className="grid grid-cols-1 md:grid-cols- lg:grid-cols-2 gap-6">
+          <ItemsCol resumes={resumes} title="Unfiltered Resumes (In Progress)" numero={3} icon={FaExclamation} setModalInfo={setModalInfo} />
+          <div className='glassCard2' />
         </div>
       </div>
 
@@ -111,3 +112,18 @@ export default function Dashboard() {
     </div>
   );
 }
+
+{/* <div className="flex-1 ml-20 p-8">
+<div className="text-5xl text-white mb-8">Dashboard Analytics</div>
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+  <ItemsCol resumes={resumes} showStatus={true} title="Scored Resumes" icon={FaFileAlt} setModalInfo={setModalInfo} />
+  <ItemsCol resumes={resumes} title="Qualified Resumes" icon={FaCheck} setModalInfo={setModalInfo} />
+  <ItemsCol resumes={resumes} title="Unqualified Resumes" icon={FaTimes} setModalInfo={setModalInfo} />
+  <ItemsCol resumes={resumes} title="Unfiltered Resumes (In Progress)" icon={FaFileAlt} setModalInfo={setModalInfo} />
+  <div className="bg-gray-800 rounded-lg overflow-hidden h-96 glassCard shadow-2xl">
+    <div className="flex items-center justify-between px-4 py-3">
+      <span className="text-2xl font-light text-white">Settings</span>
+    </div>
+  </div>
+</div>
+</div> */}
