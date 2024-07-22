@@ -83,13 +83,23 @@ body {
   transform: scale(1.05);
 }
 
+.glassCard3 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  fill: linear-gradient(107deg, rgba(18, 155, 255, 0.30) 20.95%, rgba(0, 0, 0, 0.00) 70.45%), linear-gradient(104deg, rgba(0, 0, 0, 0.25) 70.74%, rgba(18, 155, 255, 0.25) 106.32%);
+  background-image: url('/card.svg');
+  stroke-width: 4px;
+  stroke: rgba(255, 255, 255, 0.00);
+  filter: drop-shadow(0px 4px 22.2px rgba(0, 0, 0, 0.65));  
+  /* backdrop-filter: blur(10px); */
+  display: flex;
+  flex-direction: column;
+}
+
 .globalBackground {
   background: linear-gradient(to top left, rgba(68, 108, 248, 0.50) 5%, rgb(0,0,0) 50%, rgba(68, 108, 248, 0.50) 95%);
 } 
-
-/* .globalBackground {
-  background: rgb(0, 0, 0)
-}  */
 
 .title-container {
   position: relative;
