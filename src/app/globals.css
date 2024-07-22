@@ -76,6 +76,11 @@ body {
   backdrop-filter: blur(17.299999237060547px);
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
+}
+
+.glassCard2:hover {
+  transform: scale(1.05);
 }
 
 .globalBackground {

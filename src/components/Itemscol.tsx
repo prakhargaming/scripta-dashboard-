@@ -21,15 +21,16 @@ interface ItemsColProps {
   numero?: number;
   icon: IconType;
   setModalInfo: (info: ResumeItem) => void;
+  onTitleClick: () => void;  // New prop for title click handler
 }
 
-function ItemsCol({ resumes, showStatus = false, title = "", numero, icon: Icon, setModalInfo }: ItemsColProps) {
+function ItemsCol({ resumes, showStatus = false, title = "", numero, icon: Icon, setModalInfo, onTitleClick }: ItemsColProps) {
   const [searchQuery, setSearchQuery] = useState('');
 
   // Filter resumes based on search query
   const filteredResumes = resumes
     .filter(resume => resume.name.toLowerCase().includes(searchQuery.toLowerCase()))
-    .slice(0, numero); // Only take the first 5 resumes
+    .slice(0, numero); // Only take the first 'numero' resumes
 
   return (
     <div className="glassCard2 shadow-2xl">
@@ -37,7 +38,12 @@ function ItemsCol({ resumes, showStatus = false, title = "", numero, icon: Icon,
         <div className="flex items-center justify-between px-4 py-3">
           <div className="flex items-center">
             <Icon className="text-white mr-5 w-6 h-6" />
-            <span className="text-3xl font-light text-white">{title}</span>
+            <span 
+              className="text-3xl font-light text-white cursor-pointer hover:underline" 
+              onClick={onTitleClick}  // Add onClick handler here
+            >
+              {title}
+            </span>
           </div>
         </div>
         <div className="p-4 space-y-2 overflow-y-auto h-full no-scrollbar">
